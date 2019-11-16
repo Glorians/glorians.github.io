@@ -51,6 +51,7 @@
 
 .hero-slider-item:hover {
     background: rgba(27, 28, 28, 0.900);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     transform: scale(1.2);
     transition: 0.3s;
 }
