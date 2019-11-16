@@ -135,5 +135,11 @@
 
         </div>
     </section>
+    <script>
+        if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+        } else {
+        document.body.classList.add('no-touch');
+        }
+    </script>
 </body>
 </html>
