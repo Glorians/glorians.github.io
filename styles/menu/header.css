@@ -1,0 +1,38 @@
+
+header {
+    width: 5em;
+    height: 100%;
+    background: #181818;
+    z-index: 5;
+    position: absolute;
+    left: 0;
+}
+
+.header-container {
+    padding: 3em 20px;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-btn-item {
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header-btn-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-btn-item:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
