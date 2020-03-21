@@ -282,45 +282,6 @@ header {
       padding-bottom: 10px;
       border-bottom: 1px #000 solid;
       transition: 0.3s; }
-  .main-block-production .item-product-klava {
-    background: url("../img/production/autoklav/2.webp") no-repeat center !important;
-    background-size: cover !important; }
-  .main-block-production .item-product-autotuning {
-    background: url("../img/production/autotuning/2.webp") no-repeat center !important;
-    background-size: cover !important; }
-  .main-block-production .item-product-pools {
-    background: url("../img/production/pools/4.webp") no-repeat center !important;
-    background-size: cover !important; }
-  .main-block-production .item-product-biofireplaces {
-    background: url("../img/production/biofireplaces/1.webp") no-repeat center !important;
-    background-size: cover !important; }
-  .main-block-production .item-product-booklets-etc {
-    background: url("../img/production/booklets-etc/1.webp") no-repeat center !important;
-    background-size: cover !important; }
-  .main-block-production .item-product-goal {
-    background: url("../img/production/goal/4.webp") no-repeat center !important;
-    background-size: cover !important; }
-  .main-block-production .item-product-capacities {
-    background: url("../img/production/capacities/1.webp") no-repeat center !important;
-    background-size: cover !important; }
-  .main-block-production .item-product-stairs {
-    background: url("../img/production/stairs/5.webp") no-repeat center !important;
-    background-size: cover !important; }
-  .main-block-production .item-product-hatches {
-    background: url("../img/production/hatches/1.webp") no-repeat center !important;
-    background-size: cover !important; }
-  .main-block-production .item-product-barbecues {
-    background: url("../img/production/barbecues/1.webp") no-repeat center !important;
-    background-size: cover !important; }
-  .main-block-production .item-product-furniture {
-    background: url("../img/production/furniture/3.webp") no-repeat center !important;
-    background-size: cover !important; }
-  .main-block-production .item-product-window-railing {
-    background: url("../img/production/window-railing/2.webp") no-repeat center !important;
-    background-size: cover !important; }
-  .main-block-production .item-product-railing {
-    background: url("../img/production/railing/2.webp") no-repeat center !important;
-    background-size: cover !important; }
 
 .popup-container {
   display: none;
@@ -335,9 +296,13 @@ header {
   background: rgba(0, 0, 0, 0.8);
   transition: 0.5s; }
 
-.popup-block {
+.popup-background {
+  position: fixed;
   width: 100%;
-  height: 80%;
+  height: 100%;
+  z-index: 11; }
+
+.popup-block {
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -346,30 +311,24 @@ header {
 
 .popup-block-image {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  position: absolute;
-  transition: 0.5s; }
+  justify-content: center;
+  align-items: flex-start;
+  transition: 0.5s;
+  z-index: 50; }
   .popup-block-image img {
-    max-width: 60%;
-    max-height: 50%; }
+    max-width: 80%;
+    max-height: 100vh; }
 
 #btn-close-popup {
+  margin-left: 10px;
   display: none;
   background: transparent;
   border: transparent;
   text-decoration: none;
-  color: #fff;
-  position: absolute;
-  top: -50px;
-  right: 30px;
+  color: rgba(255, 255, 255, 0.5);
   font-size: 40px;
   padding: 10px;
   transition: 0.3s; }
-  #btn-close-popup:hover {
-    transform: scale(1.2);
-    transition: 0.3s; }
 
 .no-touch .main-block-production .item-product:hover {
   transform: scale(1.1);
@@ -382,6 +341,84 @@ header {
     transition: 0.3s; }
   .no-touch .main-block-production .item-product:hover .item-product-img {
     filter: grayscale(0); }
+
+.no-touch #btn-close-popup:hover {
+  color: #fff;
+  transition: 0.3s; }
+
+.btn-popup-arrow {
+  background: transparent;
+  border: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 60px;
+  z-index: 60;
+  transition: 0.3s; }
+
+.no-touch .btn-popup-arrow:hover {
+  transition: 0.3s;
+  color: #fff; }
+
+#btn-arrow-left-popup {
+  position: absolute;
+  top: 45%;
+  left: 5%; }
+
+#btn-arrow-right-popup {
+  position: absolute;
+  top: 45%;
+  right: 5%; }
+
+.item-product-klava {
+  background: url("../img/production/autoklav/1.webp") no-repeat center !important;
+  background-size: cover !important; }
+
+.item-product-autotuning {
+  background: url("../img/production/autotuning/1.webp") no-repeat center !important;
+  background-size: cover !important; }
+
+.item-product-pools {
+  background: url("../img/production/pools/1.webp") no-repeat center !important;
+  background-size: cover !important; }
+
+.item-product-biofireplaces {
+  background: url("../img/production/biofireplaces/1.webp") no-repeat center !important;
+  background-size: cover !important; }
+
+.item-product-booklets-etc {
+  background: url("../img/production/booklets-etc/1.webp") no-repeat center !important;
+  background-size: cover !important; }
+
+.item-product-goal {
+  background: url("../img/production/goal/1.webp") no-repeat center !important;
+  background-size: cover !important; }
+
+.item-product-capacities {
+  background: url("../img/production/capacities/1.webp") no-repeat center !important;
+  background-size: cover !important; }
+
+.item-product-stairs {
+  background: url("../img/production/stairs/1.webp") no-repeat center !important;
+  background-size: cover !important; }
+
+.item-product-hatches {
+  background: url("../img/production/hatches/1.webp") no-repeat center !important;
+  background-size: cover !important; }
+
+.item-product-barbecues {
+  background: url("../img/production/barbecues/1.webp") no-repeat center !important;
+  background-size: cover !important; }
+
+.item-product-furniture {
+  background: url("../img/production/furniture/1.webp") no-repeat center !important;
+  background-size: cover !important; }
+
+.item-product-window-railing {
+  background: url("../img/production/window-railing/1.webp") no-repeat center !important;
+  background-size: cover !important; }
+
+.item-product-railing {
+  background: url("../img/production/railing/1.webp") no-repeat center !important;
+  background-size: cover !important; }
 
 /* Large desktops and laptops */
 @media only screen and (min-width: 1200px) {

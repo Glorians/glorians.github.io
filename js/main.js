@@ -1,4 +1,4 @@
-
+//header
 $(window).scroll(function () {
     if (window.innerWidth >= 768) {
         var scroll = $(window).scrollTop();
@@ -12,7 +12,7 @@ $(window).scroll(function () {
     }
 });
 
-
+//burger
 $(function () {
     $(".hamburger").on("click", function () {
         $(".header-menu").slideToggle(300, function () {
@@ -32,37 +32,44 @@ if (('ontouchstart' in window) || window.DocumentTouch && document instanceof Do
 }
 
 
+//product
 $(document).ready(function () {
+
    $("#btn-close-popup").click(function () {
        $(".popup-container").css("display", "none")
    });
 
+   $(".popup-background").click(function () {
+      $(".popup-container").css("display", "none")
+   });
+
+    var url, item;
     $(".item-product").click(function () {
       console.log("click");
       let img = $(this).find(".item-product-img");
+      item = this;
       let imgClass = $(img).attr("class");
       let arrayImgClass = imgClass.split(" ");
       let background = $("."+arrayImgClass[1]).css("background-image");
       let arrayBackground = background.split(" ");
-      console.log(arrayBackground);
-      let browser = navigator.userAgent;
-      console.log(browser);
       let arrayUrl = arrayBackground[0].split('"');
-      let url = arrayUrl[1];
-
-        console.log("перебор arrayUrl");
-      for(i = 0; i < arrayUrl; i++) {
-          console.log(arrayUrl[i])
-      }
+      url = arrayUrl[1];
 
       console.log(url);
 
-
       $(".popup-img").attr("src", url);
-
       $("#btn-close-popup").css("display", "block");
       $(".popup-container").css("display", "flex");
     });
+
+
+    $("#btn-arrow-right-popup").click(function () {
+        
+        if (item != null) {
+            $(".popup-img").attr("src", url);
+        }
+    });
+
 
 });
 
