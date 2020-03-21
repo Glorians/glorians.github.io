@@ -247,15 +247,17 @@ header {
     align-items: center;
     flex-direction: column;
     transition: 0.3s; }
-    .main-block-production .item-product:hover, .main-block-production .item-product :focus {
+    .main-block-production .item-product:focus {
       transform: scale(1.1);
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       background: #fff;
       cursor: pointer;
       transition: 0.3s; }
-      .main-block-production .item-product:hover h3, .main-block-production .item-product :focus h3 {
+      .main-block-production .item-product:focus h3 {
         padding: 20px 20px 10px 20px;
         transition: 0.3s; }
+      .main-block-production .item-product:focus .item-product-img {
+        filter: grayscale(0); }
     .main-block-production .item-product .item-product-img {
       margin-top: 30px;
       width: 80%;
@@ -264,7 +266,8 @@ header {
       overflow: hidden;
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      filter: grayscale(100%); }
       .main-block-production .item-product .item-product-img img {
         width: 100%;
         height: 100%; }
@@ -368,6 +371,18 @@ header {
     transform: scale(1.2);
     transition: 0.3s; }
 
+.no-touch .main-block-production .item-product:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background: #fff;
+  cursor: pointer;
+  transition: 0.3s; }
+  .no-touch .main-block-production .item-product:hover h3 {
+    padding: 20px 20px 10px 20px;
+    transition: 0.3s; }
+  .no-touch .main-block-production .item-product:hover .item-product-img {
+    filter: grayscale(0); }
+
 /* Large desktops and laptops */
 @media only screen and (min-width: 1200px) {
   .hamburger {
@@ -418,7 +433,11 @@ header {
   .text1-section-information {
     max-width: 100%; }
   .info-img-company {
-    margin-top: 50px; } }
+    margin-top: 50px; }
+  .main-block-production .item-product {
+    background: #fff; }
+    .main-block-production .item-product .item-product-img {
+      filter: grayscale(0); } }
 
 /* Landscape phones and smaller */
 @media (max-width: 480px) {
@@ -456,7 +475,11 @@ header {
     max-width: 300px;
     max-height: 400px; }
   .text1-section-information {
-    padding: 0 10px; } }
+    padding: 0 10px; }
+  .main-block-production .item-product {
+    background: #fff; }
+    .main-block-production .item-product .item-product-img {
+      filter: grayscale(0); } }
 
 .container {
   display: flex;

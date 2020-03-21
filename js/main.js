@@ -38,14 +38,24 @@ $(document).ready(function () {
    });
 
     $(".item-product").click(function () {
-
+      console.log("click");
       let img = $(this).find(".item-product-img");
       let imgClass = $(img).attr("class");
       let arrayImgClass = imgClass.split(" ");
-      let background = $("."+arrayImgClass[1]).css("background");
+      let background = $("."+arrayImgClass[1]).css("background-image");
       let arrayBackground = background.split(" ");
-      let arrayUrl = arrayBackground[4].split('"');
+      console.log(arrayBackground);
+      let browser = navigator.userAgent;
+      console.log(browser);
+      let arrayUrl = arrayBackground[0].split('"');
       let url = arrayUrl[1];
+
+        console.log("перебор arrayUrl");
+      for(i = 0; i < arrayUrl; i++) {
+          console.log(arrayUrl[i])
+      }
+
+      console.log(url);
 
 
       $(".popup-img").attr("src", url);
