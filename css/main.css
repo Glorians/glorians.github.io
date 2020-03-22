@@ -328,6 +328,7 @@ header {
   color: rgba(255, 255, 255, 0.5);
   font-size: 40px;
   padding: 10px;
+  outline: none;
   transition: 0.3s; }
 
 .no-touch .main-block-production .item-product:hover {
@@ -352,13 +353,15 @@ header {
   color: rgba(255, 255, 255, 0.5);
   font-size: 60px;
   z-index: 60;
-  transition: 0.3s; }
+  transition: 0.3s;
+  outline: none; }
 
 .no-touch .btn-popup-arrow:hover {
   transition: 0.3s;
   color: #fff; }
 
 #btn-arrow-left-popup {
+  display: none;
   position: absolute;
   top: 45%;
   left: 5%; }

@@ -35,19 +35,25 @@ if (('ontouchstart' in window) || window.DocumentTouch && document instanceof Do
 //product
 $(document).ready(function () {
 
+    function closePopup () {
+        $(".popup-container").css("display", "none");
+        $("#btn-arrow-right-popup").css("display", "block");
+        $("#btn-arrow-left-popup").css("display", "none");
+        num = 1;
+    }
+
    $("#btn-close-popup").click(function () {
-       $(".popup-container").css("display", "none")
+      closePopup()
    });
 
    $(".popup-background").click(function () {
-      $(".popup-container").css("display", "none")
+       closePopup()
    });
 
-    var url, item;
+    let url;
     $(".item-product").click(function () {
-      console.log("click");
-      let img = $(this).find(".item-product-img");
-      item = this;
+      let img = $(this).find(".item-product-img"); // Получить объект картинку
+
       let imgClass = $(img).attr("class");
       let arrayImgClass = imgClass.split(" ");
       let background = $("."+arrayImgClass[1]).css("background-image");
@@ -55,7 +61,9 @@ $(document).ready(function () {
       let arrayUrl = arrayBackground[0].split('"');
       url = arrayUrl[1];
 
-      console.log(url);
+      if (checkContImages(url) === 1) {
+          $("#btn-arrow-right-popup").css("display", "none");
+      }
 
       $(".popup-img").attr("src", url);
       $("#btn-close-popup").css("display", "block");
@@ -64,16 +72,105 @@ $(document).ready(function () {
 
 
     $("#btn-arrow-right-popup").click(function () {
-        
-        if (item != null) {
-            $(".popup-img").attr("src", url);
-        }
+        $(".popup-img").attr("src", slider(url, "+", checkContImages(url)));
     });
 
+    $("#btn-arrow-left-popup").click(function () {
+        $(".popup-img").attr("src", slider(url, "-", checkContImages(url)));
+
+    })
 
 });
 
+let num = 1;
+function slider(url, direction, cont) {
 
+    switch (direction) {
+        case "+":
+            num++;
+            break;
+        case "-":
+            num--;
+            break;
+    }
+
+    if (num > 1 ) {
+        $("#btn-arrow-left-popup").css("display", "block")
+    }
+
+    else {
+        $("#btn-arrow-left-popup").css("display", "none")
+    }
+
+    if (num < cont) {
+        $("#btn-arrow-right-popup").css("display", "block")
+    }
+
+    else {
+        $("#btn-arrow-right-popup").css("display", "none")
+    }
+
+    return imageSrcRename(url, num);
+}
+
+function checkContImages(url) {
+
+    let arrayDir = url.split("/");
+    let nameDir = arrayDir[5];
+
+    switch (nameDir) {
+        case "autoklav":
+            return 3;
+
+        case "autotuning":
+            return 6;
+
+        case "pools":
+            return 8;
+
+        case "biofireplaces":
+            return 5;
+
+        case "booklets-etc":
+            return 1;
+
+        case "goal":
+            return 6;
+
+        case "capacities":
+            return 1;
+
+        case "stairs":
+            return 7;
+
+        case "hatches":
+            return 4;
+
+        case "barbecues":
+            return 1;
+
+        case "furniture":
+            return 18;
+
+        case "window-railing":
+            return 4;
+
+        case "railing":
+            return 10;
+    }
+}
+
+function imageSrcRename(url, num) {
+    let arrayUrl = url.split("/");
+
+    arrayUrl[arrayUrl.length - 1] = num + ".webp";
+    let result = arrayUrl.toString();
+    for (i = 0; i < arrayUrl.length; i++) {
+        result = result.replace(",", "/");
+    }
+    return result;
+
+}
 
 
 
