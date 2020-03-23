@@ -519,7 +519,17 @@ header {
   .main-block-production .item-product {
     background: #fff; }
     .main-block-production .item-product .item-product-img {
-      filter: grayscale(0); } }
+      filter: grayscale(0); }
+  .popup-block-image {
+    max-width: 100%;
+    max-height: 100%; }
+    .popup-block-image img {
+      max-width: 90%; }
+  #btn-close-popup {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    font-size: 50px; } }
 
 .container {
   display: flex;
