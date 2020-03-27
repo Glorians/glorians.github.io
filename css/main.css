@@ -217,7 +217,7 @@ header {
 .section-production {
   width: 100%;
   height: 100%;
-  background: url("../img/production/backgroundWhite.jpg") #35363a center no-repeat;
+  background: url("../img/production/backgroundWhite.png") #f6f5f1 center no-repeat;
   background-size: cover; }
 
 .production-container {
@@ -423,12 +423,126 @@ header {
   background: url("../img/production/railing/1.webp") no-repeat center !important;
   background-size: cover !important; }
 
+.section-contact {
+  width: 100%;
+  background: url("../img/contact/backgroundWhite.png") no-repeat center #f6f5f1;
+  background-size: cover; }
+
+.contact-container {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 0; }
+
+.headline-contact {
+  color: #000 !important;
+  border-bottom: 1px #000 solid !important; }
+
+.contact-info-main-block {
+  display: flex;
+  padding: 100px 0;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.block-google-maps {
+  width: 50%;
+  border: 1px #000 solid; }
+  .block-google-maps iframe {
+    width: 100%; }
+
+.block-info-contacts {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  border-left: 1px #000 solid;
+  width: 40%;
+  padding-left: 20px; }
+
+.item-contact-info {
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .item-contact-info h4 {
+    margin-right: 20px;
+    font-family: "Montserrat Medium", sans-serif; }
+  .item-contact-info span {
+    text-align: right;
+    max-width: 60%;
+    display: inline-block;
+    font-family: "Montserrat Light", sans-serif;
+    color: #000; }
+    .item-contact-info span a {
+      text-decoration: none;
+      color: #000;
+      transition: 0.3s; }
+    .item-contact-info span a:hover {
+      border-bottom: 1px #000 solid;
+      transition: 0.3s; }
+
+.item-contact-info-social {
+  padding-top: 30px;
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column; }
+  .item-contact-info-social h4 {
+    font-family: "Montserrat Medium", sans-serif;
+    padding-bottom: 10px;
+    border-bottom: 1px #000 solid; }
+
+.item-contact-info-social-block {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .item-contact-info-social-block li {
+    font-size: 36px;
+    margin: 0 20px;
+    color: rgba(0, 0, 0, 0.6); }
+
+.block-author {
+  padding: 10px 0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .block-author a {
+    font-family: "Montserrat Light", sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s; }
+    .block-author a:hover {
+      border-bottom: 1px #000 solid;
+      transition: 0.3s; }
+
 /* Large desktops and laptops */
 @media only screen and (min-width: 1200px) {
   .hamburger {
     display: none; } }
 
 /* Portrait tablets and medium desktops */
+@media (max-width: 1115px) {
+  .contact-info-main-block {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse; }
+    .contact-info-main-block div {
+      margin-top: 30px; }
+  .block-info-contacts {
+    width: 60%; } }
+
 /* Portrait tablets and small desktops */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header-container {
@@ -450,7 +564,11 @@ header {
   .text1-section-information {
     max-width: 100%; }
   .info-img-company {
-    margin-top: 50px; } }
+    margin-top: 50px; }
+  .block-info-contacts {
+    width: 70%; }
+  .block-google-maps {
+    width: 70%; } }
 
 /* Landscape phones and portrait tablets */
 @media only screen and (max-width: 767px) {
@@ -477,7 +595,11 @@ header {
   .main-block-production .item-product {
     background: #fff; }
     .main-block-production .item-product .item-product-img {
-      filter: grayscale(0); } }
+      filter: grayscale(0); }
+  .block-info-contacts {
+    width: 80%; }
+  .block-google-maps {
+    width: 90%; } }
 
 /* Landscape phones and smaller */
 @media (max-width: 480px) {
@@ -519,7 +641,20 @@ header {
   .main-block-production .item-product {
     background: #fff; }
     .main-block-production .item-product .item-product-img {
-      filter: grayscale(0); } }
+      filter: grayscale(0); }
+  #btn-close-popup {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    font-size: 50px; }
+  .block-info-contacts {
+    width: 90%;
+    padding-left: 0;
+    border: 0; }
+  .block-google-maps {
+    width: 95%; }
+  .contact-info-main-block {
+    padding: 50px 0; } }
 
 .container {
   display: flex;
@@ -551,3 +686,21 @@ body {
   height: 100%;
   background: linear-gradient(to bottom, rgba(53, 54, 58, 0.6), transparent);
   z-index: 5; }
+
+.btn-up-mobile {
+  display: none;
+  position: fixed;
+  width: 75px;
+  height: 75px;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 50;
+  justify-content: center;
+  align-items: center;
+  border-radius: 45px;
+  bottom: 20px;
+  right: 20px; }
+  .btn-up-mobile a {
+    text-align: center;
+    font-size: 26px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8); }

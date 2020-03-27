@@ -1,17 +1,31 @@
 //header
 $(window).scroll(function () {
+    var scrll;
+
     if (window.innerWidth >= 768) {
-        var scroll = $(window).scrollTop();
+        scroll = $(window).scrollTop();
 
         if (scroll >= 2) {
             $("header").addClass("sticky");
+            $(".btn-up-mobile").css("display", "flex")
         } else {
             $("header").removeClass("sticky");
+            $(".btn-up-mobile").css("display", "none")
         }
 
     }
-});
+    else {
+        if (window.innerWidth >= 0) {
+            scroll = $(window).scrollTop();
 
+            if (scroll >= 2) {
+                $(".btn-up-mobile").css("display", "flex")
+            } else {
+                $(".btn-up-mobile").css("display", "none")
+            }
+        }
+    }
+});
 //burger
 $(function () {
     $(".hamburger").on("click", function () {
@@ -39,6 +53,8 @@ $(document).ready(function () {
         $(".popup-container").css("display", "none");
         $("#btn-arrow-right-popup").css("display", "block");
         $("#btn-arrow-left-popup").css("display", "none");
+        $(".btn-up-mobile").css("display", "flex");
+        $("body").css("overflow", "auto");
         num = 1;
     }
 
@@ -52,6 +68,8 @@ $(document).ready(function () {
 
     let url;
     $(".item-product").click(function () {
+        $(".btn-up-mobile").css("display", "none");
+        $("body").css("overflow", "hidden");
       let img = $(this).find(".item-product-img"); // Получить объект картинку
 
       let imgClass = $(img).attr("class");
