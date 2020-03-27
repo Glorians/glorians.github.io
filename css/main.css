@@ -217,7 +217,7 @@ header {
 .section-production {
   width: 100%;
   height: 100%;
-  background: url("../img/production/backgroundWhite.png") #f6f5f1 center no-repeat;
+  background: url("../img/production/backgroundWhite.webp") #f6f5f1 center no-repeat;
   background-size: cover; }
 
 .production-container {
@@ -425,7 +425,7 @@ header {
 
 .section-contact {
   width: 100%;
-  background: url("../img/contact/backgroundWhite.png") no-repeat center #f6f5f1;
+  background: url("../img/contact/backgroundWhite.webp") no-repeat center #f6f5f1;
   background-size: cover; }
 
 .contact-container {
