@@ -510,6 +510,28 @@ header {
     margin: 0 20px;
     color: rgba(0, 0, 0, 0.6); }
 
+.contact-numbers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100px; }
+
+.contact-numbers-item {
+  text-align: right;
+  display: inline-block;
+  font-family: "Montserrat Light", sans-serif;
+  color: #000; }
+  .contact-numbers-item a {
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s; }
+  .contact-numbers-item a:hover {
+    border-bottom: 1px #000 solid;
+    transition: 0.3s; }
+
+.contact-number-name {
+  text-align: center; }
+
 .block-author {
   padding: 10px 0;
   width: 100%;
