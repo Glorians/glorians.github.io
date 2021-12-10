@@ -3,309 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Alex Beliaev #Glorian">
-    <meta name="description" content="наша компания готова предложить Вам нестандартное
-    выполнение любой Вашей фантазии в металле. Изготавливаем лестницы, мебель, тюнинг машин, ёмкости
-    и многое другое. ">
-
-    <!--    Awesome-->
-    <script src="https://kit.fontawesome.com/6a9520b512.js" crossorigin="anonymous"></script>
-
-    <!--    STYLE-->
-    <link rel="stylesheet" href="css/reset.css" type="text/css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-
-    <!--    FONT-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
-    <title>Metalloinox</title>
+    <title>web</title>
+    <link href='https://fonts.googleapis.com/css?family=Prompt' rel='stylesheet'>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
-
 <body>
+<header>
+    <div class="container-content header-content">
+        <img class="logo" src="images/logo.png" alt="logo">
 
-<div class="btn-up-mobile">
-    <a href="#hero-section">
-        <i class="fas fa-chevron-up"></i>
-    </a>
-</div>
+        <ul class="menu">
+            <li class="menu-item active-menu-item">
+                <a href="#">Discover</a>
+            </li>
+            <li class="menu-item">
+                <a href="#">Features</a>
+            </li>
+            <li class="menu-item">
+                <a href="#">How it Works</a>
+            </li>
+        </ul>
 
-<!--HEADER-->
-<header class="section-header">
-    <div class="container header-container">
-
-        <div class="header-logo-menu-block">
-            <a href="index.html">
-                <img class="header-logo" id="main-logo" src="img/logo.png" alt="logo">
-            </a>
-            <button class="hamburger">&#9776;</button>
-
-            <ul class="header-menu">
-                <li class="header-menu-item">
-                    <a href="#info" class="header-menu-item-link">О фирме</a>
-                </li>
-
-                <li class="header-menu-item">
-                    <a href="#production" class="header-menu-item-link">Продукция</a>
-                </li>
-
-                <li class="header-menu-item">
-                    <a href="#contact" class="header-menu-item-link">Контакты</a>
-                </li>
-            </ul>
-
-
-        </div>
-
+        <button class="btn-login">Login</button>
     </div>
 </header>
 
-<!--HERO-->
-<section class="section-hero">
-    <span id="hero-section"></span>
-    <div class="container hero-container">
+<section class="hero">
+
+    <div class="hero-container">
         <div class="hero-content">
-            <h1 class="hero-headline hero-text">
-                Компания «Metalloinox»
-            </h1>
-            <h2 class="hero-info-text hero-text">изготовит по вашему заказу
-                любые изделия из нержавеющей стали.</h2>
-            <a href="#info" class="hero-btn-info">Подробнее</a>
 
-        </div>
-    </div>
+            <h2 class="hero-heading-text">Make New Friends over</h2>
+            <h1 class="hero-main-text">Beach Football</h1>
+            <p class="hero-description-text">
+                Challenge your friends and play together a game
+                of Beach Football at your nearest beach.
+            </p>
 
-</section>
-
-<!--INFO-->
-<section class="section-info">
-
-    <div class="gradient-section">
-        <a id="info"></a> <!--Якорь-->
-        <div class="container info-container">
-            <h2 class="headline-section">О компании</h2>
-
-            <div class="information-company-main-block-section-info">
-
-                <div class="text1-section-information">
-                    <p>
-                        На сегодняшний день наша компания готова предложить
-                        Вам нестандартное выполнение любой Вашей фантазии в металле.
-                        Изготавливаем лестницы, мебель, тюнинг машин, ёмкости и многое другое.
-                        Ваш заказ будет выполнен мастерами свего дела, которые вкладывают
-                        частичку души в свою работу.
-                    </p>
-
-                    <p class="down-text">
-                        Работая с металлом, мы творим, как художники,
-                        делая сначала эскизы, а потом уже составляем точный чертеж, учитывая все Ваши пожелания.
-                        Мы работаем уже более десяти лет с самыми требовательными заказчиками. Нашими клиентами
-                        остаются на долгое время, приводя еще своих друзей.
-                        Надеемся на долговременное сотрудничество, и ждём новых заказов от Вас.
-                    </p>
-
-                </div>
-
-                <!--                <img class="info-img-company lazyload" data-src="img/info/img.jpg" alt="company">-->
-
-
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!--PRODUCTION-->
-
-<section class="section-production">
-    <div class="popup-container">
-        <div class="popup-background"></div>
-        <div class="popup-block">
-            <button id="btn-arrow-left-popup" class="btn-popup-arrow">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <div class="popup-block-image">
-                <img class="popup-img" alt="">
-                <button id="btn-close-popup">
-                    <i class="fas fa-times"></i>
+            <div class="hero-input-box">
+                <img src="images/pointer_icon.png" alt="point icon">
+                <input type="text" placeholder="Search beach arenas">
+                <button>
+                    <img src="images/arrow_left.png" alt="arrow left">
                 </button>
             </div>
-            <button id="btn-arrow-right-popup" class="btn-popup-arrow">
-                <i class="fas fa-chevron-right"></i>
-            </button>
 
-        </div>
-    </div>
-    <a id="production"></a>
-
-    <div class="gradient-section">
-        <div class="container production-container">
-            <h2 class="headline-section headline-section-production">Продукция</h2>
-
-            <ul class="main-block-production">
-                <li class="item-product">
-                    <div class="item-product-img item-product-klava"></div>
-                    <h3>Автоклавы</h3>
-                </li>
-
-                <li class="item-product">
-                    <div class="item-product-img item-product-autotuning">
-                    </div>
-                    <h3>Автотюнинг</h3>
-                </li>
-
-                <li class="item-product">
-                    <div class="item-product-img item-product-pools">
-                    </div>
-                    <h3>Бассейны</h3>
-                </li>
-
-                <li class="item-product">
-                    <div class="item-product-img item-product-biofireplaces">
-                    </div>
-                    <h3>Биокамины</h3>
-                </li>
-
-                <li class="item-product">
-                    <div class="item-product-img item-product-booklets-etc">
-                    </div>
-                    <h3>Буклетницы и подобное</h3>
-                </li>
-
-                <li class="item-product">
-                    <div class="item-product-img item-product-goal">
-                    </div>
-                    <h3>Ворота</h3>
-                </li>
-
-                <li class="item-product">
-                    <div class="item-product-img item-product-capacities">
-                    </div>
-                    <h3>Емкости</h3>
-                </li>
-
-                <li class="item-product">
-                    <div class="item-product-img item-product-stairs">
-                    </div>
-                    <h3>Лестницы</h3>
-                </li>
-
-                <li class="item-product">
-                    <div class="item-product-img item-product-hatches">
-                    </div>
-                    <h3>Люки</h3>
-                </li>
-
-                <li class="item-product">
-                    <div class="item-product-img item-product-barbecues">
-                    </div>
-                    <h3>Мангалы</h3>
-                </li>
-
-                <li class="item-product">
-                    <div class="item-product-img item-product-furniture">
-                    </div>
-                    <h3>Мебель</h3>
-                </li>
-
-                <li class="item-product">
-                    <div class="item-product-img item-product-window-railing">
-                    </div>
-                    <h3>Оконные ограждения</h3>
-                </li>
-
-                <li class="item-product">
-                    <div class="item-product-img item-product-railing">
-                    </div>
-                    <h3>Перила</h3>
-                </li>
-
-            </ul>
-
+            <p class="hero-location-text">Popular Beach Arenas: Virginia, California, Texas</p>
         </div>
     </div>
 
+
+    <div class="hero-background">
+        <img src="images/tree.png" alt="tree">
+        <img src="images/background_human.png">
+    </div>
 </section>
 
-<!--CONTACT-->
-<section class="section-contact">
-    <a id="contact"></a>
-    <div class="container contact-container">
-        <h2 class="headline-section headline-contact">Контакты</h2>
-
-        <div class="contact-info-main-block">
-            <div class="block-google-maps">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10080.955216685823!2d32.01575760858563!3d49.445064720456116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d14c5c10121ed7%3A0x4a10f026ba52ec94!2sAvtoharazhnyy%20Kooperatyv%20Slavutych!5e0!3m2!1sru!2sua!4v1585335282611!5m2!1sru!2sua"
-                        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
-                        aria-hidden="false" tabindex="0"></iframe>
-            </div>
-            <ul class="block-info-contacts">
-
-                <li class="item-contact-info">
-                    <h4>Адрес:</h4>
-                    <span>Украина Черкассы ул. Рустави 4 Кооп. Славутич</span>
-                </li>
-                <li class="item-contact-info">
-                    <h4>Телефон:</h4>
-                    <ul class="contact-numbers">
-                        <li class="contact-numbers-item">
-                            <a href="tel:+380631248173" >
-                                +380631248173
-                            </a>
-                        </li>
-
-                        <li class="contact-numbers-item">
-                            <a href="tel:+380674742101" class="contact-numbers-item">
-                                +380674742101
-                            </a>
-                        </li>
-
-                        <li class="contact-numbers-item contact-number-name">
-                            <span>(Вячеслав)</span>
-                        </li>
-
-                    </ul>
-                </li>
-
-                <li class="item-contact-info">
-                    <h4>Електронная почта:</h4>
-                    <span>
-                        <a href="mailto:ukrinox@ukr.net">
-                        ukrinox@ukr.net
-                        </a>
-                    </span>
-                </li>
-
-                <li class="item-contact-info-social">
-                    <h4>Где мы есть</h4>
-                    <ul class="item-contact-info-social-block">
-                        <li>
-                            <i class="fab fa-telegram"></i>
-                        </li>
-                        <li>
-                            <i class="fab fa-viber"></i>
-                        </li>
-                        <li>
-                            <i class="fab fa-facebook"></i>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-    </div>
-    <div class="block-author">
-        <a href="tg://resolve?domain=Glorian7">design by @Алексей Беляев</a>
-    </div>
-
-</section>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous">
-</script>
-<script src="js/main.js" async></script>
 
 </body>
 </html>
